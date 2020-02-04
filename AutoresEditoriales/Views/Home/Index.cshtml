@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Lista de Editoriales";
+}
+
+<div class="jumbotron">
+    <h1>Lista Editoriales</h1>
+</div>
+
+<div class="row">
+    <table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre Editorial</th>
+            <th>Sede Editorial</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var edit in ViewBag.editoriales)
+        {
+            <tr>
+                <td>@edit.id_edit</td>
+                <td>@edit.nombre_edit</td>
+                <td>@edit.sede_edit</td>
+            </tr>
+
+        }
+    </tbody>
+    </table>
+</div>
